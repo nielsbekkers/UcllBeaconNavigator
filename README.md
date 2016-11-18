@@ -1,0 +1,10 @@
+# UcllBeaconNavigator
+Android App Project
+
+#UUID Beacons
+
+Icy Marshmallow: B9407F30-F5F8-466E-AFF9-25556B57FE6D
+
+Mint Cocktail: B9407F30-F5F8-466E-AFF9-25556B57FE6D
+
+Blueberry Pie: B9407F30-F5F8-466E-AFF9-25556B57FE6D
