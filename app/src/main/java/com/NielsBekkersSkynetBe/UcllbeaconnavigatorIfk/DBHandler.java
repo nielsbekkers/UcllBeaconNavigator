@@ -2,6 +2,7 @@ package com.NielsBekkersSkynetBe.UcllbeaconnavigatorIfk;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.Settings;
@@ -34,7 +35,6 @@ public class DBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_BEACONS + "(" + KEY_MAJOR + " INTEGER PRIMARY KEY," + KEY_UUID + " TEXT," + KEY_NAME + "TEXT," + KEY_MINOR + "INTEGER," +KEY_LOCATION_TITLE + "TEXT," +KEY_LOCATION_DESCRIPTION + "TEXT," +")";
         db.execSQL(CREATE_CONTACTS_TABLE);
-        System.out.print("DATABASE IS AANGEMAAKT");
     }
 
     @Override
@@ -47,15 +47,40 @@ public class DBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values=new ContentValues();
 
-        values.put(KEY_MAJOR,BeaconDevice.getMajor());
-        values.put(KEY_UUID,BeaconDevice.getUUID());
-        values.put(KEY_MINOR,BeaconDevice.getMinor());
-        values.put(KEY_NAME,BeaconDevice.getName());
-        values.put(KEY_LOCATION_TITLE,BeaconDevice.getKeyLocationTitle());
-        values.put(KEY_LOCATION_DESCRIPTION,BeaconDevice.getLocationDescription());
+        values.put(KEY_MAJOR,bd.getMajor());
+        values.put(KEY_UUID,bd.getUUID());
+        values.put(KEY_MINOR,bd.getMinor());
+        values.put(KEY_NAME,bd.getName());
+        values.put(KEY_LOCATION_TITLE,bd.getKeyLocationTitle());
+        values.put(KEY_LOCATION_DESCRIPTION,bd.getLocationDescription());
 
-        db.insert(TABLE_BEACONS,null,values);
+        db.insertWithOnConflict(TABLE_BEACONS,null,values,SQLiteDatabase.CONFLICT_REPLACE);
         db.close();
     }
+
+
+
+    public void printTableData(String table_name){
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cur = db.rawQuery("SELECT * FROM " + table_name, null);
+
+        if(cur.getCount() != 0){
+            cur.moveToFirst();
+
+            do{
+                String row_values = "";
+
+                for(int i = 0 ; i < cur.getColumnCount(); i++){
+                    row_values = row_values + " || " + cur.getString(i);
+                }
+
+                Log.d("DATABASE PRINT", row_values);
+
+            }while (cur.moveToNext());
+        }
+    }
+
+
 }
 

@@ -5,38 +5,60 @@ package com.NielsBekkersSkynetBe.UcllbeaconnavigatorIfk;
  */
 
 public class BeaconDevice {
-    private static final String KEY_UUID = "B9407F30-F5F8-466E-AFF9-25556B57FE6D ";
-    private static final String KEY_NAME = "Icy Marshmallow";
-    private static final Integer KEY_MAJOR = 47541;
-    private static final Integer KEY_MINOR = 3683;
-    private static final String KEY_LOCATION_TITLE = "K103";
-    private static final String KEY_LOCATION_DESCRIPTION = "Lokaal van K103 je bent er.";
+    private String KEY_UUID;
+    private String KEY_NAME;
+    private String KEY_MAJOR;
+    private String KEY_MINOR;
+    private String KEY_LOCATION_TITLE;
+    private String KEY_LOCATION_DESCRIPTION;
 
     public BeaconDevice(){
 
     }
 
-    public static int getMajor(){
+    public void setMajor(String major){this.KEY_MAJOR=major;}
+
+    public void setMinor(String KEY_MINOR) {
+        this.KEY_MINOR = KEY_MINOR;
+    }
+
+    public void setName(String KEY_NAME) {
+        this.KEY_NAME = KEY_NAME;
+    }
+
+    public void setUUID(String KEY_UUID) {
+        this.KEY_UUID = KEY_UUID;
+    }
+
+    public void setLocationTitle(String KEY_LOCATION_TITLE) {
+        this.KEY_LOCATION_TITLE = KEY_LOCATION_TITLE;
+    }
+
+    public void setLocationDescription(String KEY_LOCATION_DESCRIPTION) {
+        this.KEY_LOCATION_DESCRIPTION = KEY_LOCATION_DESCRIPTION;
+    }
+
+    public String getMajor(){
         return KEY_MAJOR;
     }
 
-    public static String getUUID(){
+    public String getUUID(){
         return KEY_UUID;
     }
 
-    public static String getName(){
+    public String getName(){
         return KEY_NAME;
     }
 
-    public static int getMinor(){
+    public String getMinor(){
         return KEY_MINOR;
     }
 
-    public static String getKeyLocationTitle(){
+    public String getKeyLocationTitle(){
         return KEY_LOCATION_TITLE;
     }
 
-    public static String getLocationDescription(){
+    public String getLocationDescription(){
         return KEY_LOCATION_DESCRIPTION;
     }
 }
