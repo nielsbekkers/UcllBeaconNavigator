@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 25 nov 2016 om 09:31
+-- Gegenereerd op: 25 nov 2016 om 10:52
 -- Serverversie: 10.1.16-MariaDB
 -- PHP-versie: 5.6.24
 
@@ -42,10 +42,9 @@ CREATE TABLE `beacons` (
 --
 
 INSERT INTO `beacons` (`major`, `minor`, `UUID`, `name`, `locationTitle`, `locationDescription`) VALUES
-('12345', '', '', '', '', ''),
-('1234555555', '000', '', '', '', ''),
-('12345587564', '', '', '', '', ''),
-('1234567890', '0001', 'B9407F30-F5F8-466E-AFF9-25556B57FE6D', 'BlueberryPi', 'location', 'description');
+('47541', '3683', '2009D368-B855-47C9-9D33-F638ED0D7465', 'Icy Marshmallow', 'K103', 'Labo lokaal klein'),
+('56034', '53222', '40E0A26E-F512-4DC0-822A-438CAF606286', 'Blueberry Pie', 'K106', 'Labo lokaal project'),
+('60369', '59394', 'B9407F30-F5F8-466E-AFF9-25556B57FE6D', 'Mint Cocktail', 'K104', 'Labo lokaal groot');
 
 --
 -- Indexen voor geëxporteerde tabellen
