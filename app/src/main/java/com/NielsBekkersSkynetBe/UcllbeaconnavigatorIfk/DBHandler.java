@@ -21,7 +21,7 @@ public class DBHandler extends SQLiteOpenHelper {
     // Contacts table name
     private static final String TABLE_BEACONS = "beacons";
     // Shops Table Columns names
-    private static final String KEY_UUID = "uuid ";
+    private static final String KEY_UUID = "uuid";
     private static final String KEY_NAME = "name";
     private static final String KEY_MAJOR = "major";
     private static final String KEY_MINOR = "minor";
@@ -33,7 +33,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_BEACONS + "(" + KEY_MAJOR + " INTEGER PRIMARY KEY," + KEY_UUID + " TEXT," + KEY_NAME + "TEXT," + KEY_MINOR + "INTEGER," +KEY_LOCATION_TITLE + "TEXT," +KEY_LOCATION_DESCRIPTION + "TEXT," +")";
+        String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_BEACONS + "(" + KEY_MAJOR + " INTEGER PRIMARY KEY," + KEY_UUID + " TEXT," + KEY_NAME + " TEXT," + KEY_MINOR + " INTEGER," +KEY_LOCATION_TITLE + " TEXT," +KEY_LOCATION_DESCRIPTION + " TEXT" +")";
         db.execSQL(CREATE_CONTACTS_TABLE);
     }
 
