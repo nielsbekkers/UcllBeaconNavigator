@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.NielsBekkersSkynetBe.UcllbeaconnavigatorIfk"
+        applicationId "com.NielsBekkersSkynetBe.UcllbeaconsH7X"
         minSdkVersion 18
         targetSdkVersion 23
         versionCode 1
@@ -26,4 +26,5 @@ dependencies {
     compile 'com.android.support:design:23.1.0'
 
     compile 'com.estimote:sdk:0.10.+@aar'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
 }

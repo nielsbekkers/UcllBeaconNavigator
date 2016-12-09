@@ -1,0 +1,7 @@
+#Fri Dec 09 10:04:46 CET 2016
+base.0=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e003bab0feedf633cb33134aa1b922a9a6198e1e
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6eed82ff00228eee057e6e9aebf1a8e5a109d0a9/classes.dex
+base.1=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6eed82ff00228eee057e6e9aebf1a8e5a109d0a9
+file.0=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e003bab0feedf633cb33134aa1b922a9a6198e1e/classes.dex
