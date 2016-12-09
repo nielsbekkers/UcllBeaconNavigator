@@ -64,12 +64,12 @@
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
-        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_menu_item_action_area.xml"
-    },
-    {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_menu_item_action_area.xml"
     },
     {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
@@ -166,6 +166,10 @@
     {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/layout/beaconinfo_widget_layout.xml",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/res/layout/beaconinfo_widget_layout.xml"
     },
     {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",

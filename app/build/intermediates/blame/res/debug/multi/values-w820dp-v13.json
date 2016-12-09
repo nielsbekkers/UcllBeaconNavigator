@@ -20,6 +20,25 @@
                         "endOffset": 344
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 43,
+                    "endOffset": 152
+                },
+                "from": {
+                    "file": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 349,
+                        "endColumn": 43,
+                        "endOffset": 388
+                    }
+                }
             }
         ]
     }

@@ -1,3 +1,42 @@
 <resources>
-    <string name="app_name">UcllbeaconsH7X</string>
+<string name="app_name">Ucll lokalen</string>
+<string-array name="device0">
+    <item>1</item>
+    <item>47541</item>                                  <!--MAJOR-->
+    <item>3683</item>                                   <!--MINOR-->
+    <item>2009D368-B855-47C9-9D33-F638ED0D7465</item>   <!--UUID-->
+    <item>Icy Marshmallow</item>                        <!--NAME-->
+    <item>K103</item>                                   <!--TITLE LOCATION-->
+    <item>Welkom in K103</item>                         <!--DESCRIPTION LOCATION-->
+</string-array>
+<string-array name="device1">
+    <item>2</item>
+    <item>60369</item>                                  <!--MAJOR-->
+    <item>59394</item>                                  <!--MINOR-->
+    <item>B9407F30-F5F8-466E-AFF9-25556B57FE6D</item>   <!--UUID-->
+    <item>Mint Cocktail</item>                          <!--NAME-->
+    <item>K104</item>                                   <!--TITLE LOCATION-->
+    <item>Welkom in K104</item>                         <!--DESCRIPTION LOCATION-->
+</string-array>
+<string-array name="device2">
+    <item>3</item>
+    <item>56034</item>                                  <!--MAJOR-->
+    <item>53222</item>                                  <!--MINOR-->
+    <item>40E0A26E-F512-4DC0-822A-438CAF606286</item>   <!--UUID-->
+    <item>Blueberry Pie</item>                          <!--NAME-->
+    <item>K106</item>                                   <!--TITLE LOCATION-->
+    <item>Welkom in K106</item>                         <!--DESCRIPTION LOCATION-->
+</string-array>
+<!--<string-array name="device3">-->
+<!--<item>4</item>-->
+<!--<item></item>-->
+<!--<item></item>-->
+<!--<item>8492E75F-4FD6-469D-B132-043FE94921D8</item>-->
+<!--<item>Iphone</item>-->
+<!--<item>Test thuis</item>-->
+<!--<item>Welkom</item>-->
+<!--</string-array>-->
+<string name="items_title">Beacons</string>
+<string name="item_id">beacon 1</string>
+<string name="item_description">lokaal</string>
 </resources>
