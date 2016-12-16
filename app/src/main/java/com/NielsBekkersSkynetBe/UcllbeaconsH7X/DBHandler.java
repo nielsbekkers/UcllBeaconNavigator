@@ -105,8 +105,8 @@ public class DBHandler extends SQLiteOpenHelper {
 //                bd.setLocationDescription(cur.getString(5));
 //                bd.setName(cur.getString(3));
 
-                bd.setMajor(cur.getString(1));
-                bd.setMinor(cur.getString(4));
+                bd.setMajor(Integer.parseInt(cur.getString(1)));
+                bd.setMinor(Integer.parseInt(cur.getString(4)));
                 bd.setUUID(cur.getString(2));
                 bd.setName(cur.getString(3));
                 bd.setLocationTitle(cur.getString(5));

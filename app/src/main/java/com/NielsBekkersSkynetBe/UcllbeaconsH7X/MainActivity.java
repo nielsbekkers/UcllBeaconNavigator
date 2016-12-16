@@ -1,8 +1,12 @@
 package com.NielsBekkersSkynetBe.UcllbeaconsH7X;
 
 import android.app.DownloadManager;
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.util.JsonReader;
+import android.util.JsonToken;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -16,18 +20,28 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.estimote.sdk.Beacon;
 import com.estimote.sdk.SystemRequirementsChecker;
+import com.estimote.sdk.cloud.internal.User;
 import com.estimote.sdk.cloud.model.Color;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Vector;
 
 //
 // Running into any issues? Drop us an email to: contact@estimote.com
@@ -37,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private final String USER_AGENT = "Mozilla/5.0";
+
+    ProgressDialog progress;
 
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
 
@@ -53,32 +69,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try {
+            progress = new ProgressDialog(this);
+            progress.setTitle("Downloading");
+            progress.setMessage("Fetching beacons...");
+            progress.setCancelable(false);
+
+            progress.show();
+
+            getBeaconsFromWeb();
+
+        } catch (Exception ex) {
+            System.err.println(ex);
+        }
+
         setContentView(R.layout.activity_main);
 
-        proximityContentManager = new ProximityContentManager(this,
-                Arrays.asList(
-                        new BeaconID("40E0A26E-F512-4DC0-822A-438CAF606286", 56034, 53222),
-                        new BeaconID("B9407F30-F5F8-466E-AFF9-25556B57FE6D", 60369, 59394),
-                        new BeaconID("2009D368-B855-47C9-9D33-F638ED0D7465", 47541, 3683)),
-                new EstimoteCloudBeaconDetailsFactory());
-        proximityContentManager.setListener(new ProximityContentManager.Listener() {
-            @Override
-            public void onContentChanged(Object content) {
-                String text;
-                Integer backgroundColor;
-                if (content != null) {
-                    EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
-                    text = "You're in " + beaconDetails.getBeaconName() + "'s range!";
-                    backgroundColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
-                } else {
-                    text = "No beacons in range.";
-                    backgroundColor = null;
-                }
-                ((TextView) findViewById(R.id.textView)).setText(text);
-                findViewById(R.id.relativeLayout).setBackgroundColor(
-                        backgroundColor != null ? backgroundColor : BACKGROUND_COLOR_NEUTRAL);
-            }
-        });
         try {
             this.getBeaconsFromWeb();
         } catch (Exception ex) {
@@ -96,7 +103,9 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "If this is fixable, you should see a popup on the app's screen right now, asking to enable what's necessary");
         } else {
             Log.d(TAG, "Starting ProximityContentManager content updates");
-            proximityContentManager.startContentUpdates();
+            if(proximityContentManager != null) {
+                proximityContentManager.startContentUpdates();
+            }
         }
     }
 
@@ -121,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        try {
+                            parseBeacons(response);
+                        } catch (JSONException ex) {
+                            System.err.println(ex.getMessage());
+                        }
                         Log.d(TAG+"/HttpGet", "Response is: "+ response);
                     }
                 }, new Response.ErrorListener() {
@@ -130,6 +144,61 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         queue.add(stringRequest);
+    }
 
+    private void parseBeacons(String beaconsString) throws JSONException {
+        JSONObject jObject = new JSONObject(beaconsString);
+        JSONArray beacons = jObject.getJSONArray("public_beacons");
+        Vector<BeaconDevice> beaconList = new Vector<>();
+        for (int i=0; i < beacons.length(); i++)
+        {
+            try {
+                BeaconDevice bd = new BeaconDevice();
+                JSONObject beacon = beacons.getJSONObject(i);
+                bd.setMajor(beacon.getInt("major"));
+                bd.setMinor(beacon.getInt("minor"));
+                bd.setUUID(beacon.getString("UUID"));
+                bd.setName(beacon.getString("name"));
+                bd.setLocationTitle(beacon.getString("locationTitle"));
+                bd.setLocationDescription(beacon.getString("locationDescription"));
+
+                beaconList.add(bd);
+            } catch (JSONException e) {
+
+            }
+        }
+        progress.dismiss();
+        initializeBeacons(beaconList);
+    }
+
+    private void initializeBeacons(Vector<BeaconDevice> beacons) {
+        if (!beacons.isEmpty()) {
+            ArrayList<BeaconID> list = new ArrayList<>();
+            for(BeaconDevice bd : beacons) {
+                list.add(new BeaconID(bd.getUUID(), bd.getMajor(), bd.getMinor()));
+            }
+
+            proximityContentManager = new ProximityContentManager(this,
+                    list, new EstimoteCloudBeaconDetailsFactory());
+            proximityContentManager.setListener(new ProximityContentManager.Listener() {
+                @Override
+                public void onContentChanged(Object content) {
+                    String text;
+                    Integer backgroundColor;
+                    if (content != null) {
+                        EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
+                        text = "You're in " + beaconDetails.getBeaconName() + "'s range!";
+                        backgroundColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
+                    } else {
+                        text = "No beacons in range.";
+                        backgroundColor = null;
+                    }
+                    ((TextView) findViewById(R.id.textView)).setText(text);
+                    findViewById(R.id.relativeLayout).setBackgroundColor(
+                            backgroundColor != null ? backgroundColor : BACKGROUND_COLOR_NEUTRAL);
+                }
+            });
+            proximityContentManager.startContentUpdates();
+        }
     }
 }

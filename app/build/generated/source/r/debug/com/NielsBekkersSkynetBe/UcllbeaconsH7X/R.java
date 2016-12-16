@@ -25,8 +25,14 @@ public final class R {
         public static final int design_snackbar_out=0x7f05000d;
     }
     public static final class array {
+        /** DESCRIPTION LOCATION
+         */
         public static final int device0=0x7f0c0000;
+        /** DESCRIPTION LOCATION
+         */
         public static final int device1=0x7f0c0001;
+        /** DESCRIPTION LOCATION
+         */
         public static final int device2=0x7f0c0002;
     }
     public static final class attr {

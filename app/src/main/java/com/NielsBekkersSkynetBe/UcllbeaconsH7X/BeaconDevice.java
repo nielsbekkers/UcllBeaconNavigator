@@ -7,8 +7,8 @@ package com.NielsBekkersSkynetBe.UcllbeaconsH7X;
 public class BeaconDevice {
     private String KEY_UUID;
     private String KEY_NAME;
-    private String KEY_MAJOR;
-    private String KEY_MINOR;
+    private int KEY_MAJOR;
+    private int KEY_MINOR;
     private String KEY_LOCATION_TITLE;
     private String KEY_LOCATION_DESCRIPTION;
 
@@ -16,9 +16,9 @@ public class BeaconDevice {
 
     }
 
-    public void setMajor(String major){this.KEY_MAJOR=major;}
+    public void setMajor(int KEY_MAJOR){this.KEY_MAJOR=KEY_MAJOR;}
 
-    public void setMinor(String KEY_MINOR) {
+    public void setMinor(int KEY_MINOR) {
         this.KEY_MINOR = KEY_MINOR;
     }
 
@@ -38,7 +38,7 @@ public class BeaconDevice {
         this.KEY_LOCATION_DESCRIPTION = KEY_LOCATION_DESCRIPTION;
     }
 
-    public String getMajor(){
+    public int getMajor(){
         return KEY_MAJOR;
     }
 
@@ -50,7 +50,7 @@ public class BeaconDevice {
         return KEY_NAME;
     }
 
-    public String getMinor(){
+    public int getMinor(){
         return KEY_MINOR;
     }
 
