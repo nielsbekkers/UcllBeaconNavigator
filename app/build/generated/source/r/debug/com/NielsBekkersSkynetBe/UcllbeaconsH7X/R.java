@@ -25,14 +25,8 @@ public final class R {
         public static final int design_snackbar_out=0x7f05000d;
     }
     public static final class array {
-        /** DESCRIPTION LOCATION
-         */
         public static final int device0=0x7f0c0000;
-        /** DESCRIPTION LOCATION
-         */
         public static final int device1=0x7f0c0001;
-        /** DESCRIPTION LOCATION
-         */
         public static final int device2=0x7f0c0002;
     }
     public static final class attr {
@@ -2434,15 +2428,12 @@ containing a value of this type.
         public static final int error_no_bluetooth_enabled=0x7f070017;
         public static final int error_no_bluetooth_le=0x7f070018;
         public static final int error_no_location_permission=0x7f070019;
-        public static final int item_description=0x7f07001a;
-        public static final int item_id=0x7f07001b;
-        public static final int items_title=0x7f07001c;
-        public static final int requesting_location_access=0x7f07001d;
-        public static final int requesting_location_access_cancel=0x7f07001e;
-        public static final int requesting_location_access_ok=0x7f07001f;
-        public static final int requesting_location_access_rationale=0x7f070020;
-        public static final int requesting_location_permission=0x7f070021;
-        public static final int requesting_location_permission_rationale=0x7f070022;
+        public static final int requesting_location_access=0x7f07001a;
+        public static final int requesting_location_access_cancel=0x7f07001b;
+        public static final int requesting_location_access_ok=0x7f07001c;
+        public static final int requesting_location_access_rationale=0x7f07001d;
+        public static final int requesting_location_permission=0x7f07001e;
+        public static final int requesting_location_permission_rationale=0x7f07001f;
         public static final int status_bar_notification_info_overflow=0x7f070013;
     }
     public static final class style {

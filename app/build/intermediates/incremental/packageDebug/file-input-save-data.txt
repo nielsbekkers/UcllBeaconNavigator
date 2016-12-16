@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 16 09:40:31 CET 2016
+#Fri Dec 16 10:56:44 CET 2016
 175.set=ANDROID_RESOURCE
 122.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/layout/notification_template_part_chronometer.xml
 60.set=ANDROID_RESOURCE
@@ -246,7 +246,7 @@
 30.set=ANDROID_RESOURCE
 126.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_switch_thumb_material.xml
 22.set=ANDROID_RESOURCE
-173.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+173.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
 141.base=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_
 50.base=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_
 14.set=ANDROID_RESOURCE
@@ -255,7 +255,7 @@
 84.set=ANDROID_RESOURCE
 76.set=ANDROID_RESOURCE
 68.set=ANDROID_RESOURCE
-133.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+133.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
 10.base=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_
 42.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/layout/design_layout_snackbar_include.xml
 180.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
@@ -322,7 +322,7 @@
 20.set=DEX
 125.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_search_dropdown_item_icons_2line.xml
 12.set=DEX
-172.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+172.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
 140.base=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_
 90.set=ANDROID_RESOURCE
 82.set=ANDROID_RESOURCE
@@ -331,7 +331,7 @@
 74.set=ANDROID_RESOURCE
 66.set=ANDROID_RESOURCE
 58.set=ANDROID_RESOURCE
-132.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+132.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
 41.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
 139.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png
 4.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png

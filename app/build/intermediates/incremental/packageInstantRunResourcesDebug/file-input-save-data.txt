@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 16 09:23:59 CET 2016
+#Fri Dec 16 11:07:07 CET 2016
 122.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/layout-sw600dp-v13/design_layout_snackbar.xml
 60.set=ANDROID_RESOURCE
 129.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
@@ -399,7 +399,7 @@ count=163
 63.set=ANDROID_RESOURCE
 107.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_switch_thumb_material.xml
 55.set=ANDROID_RESOURCE
-154.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+154.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
 31.base=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_
 63.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_list_menu_item_layout.xml
 47.set=ANDROID_RESOURCE
@@ -463,7 +463,7 @@ count=163
 53.set=ANDROID_RESOURCE
 106.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_search_dropdown_item_icons_2line.xml
 45.set=ANDROID_RESOURCE
-153.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+153.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
 30.base=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_
 62.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/layout/notification_media_action.xml
 37.set=ANDROID_RESOURCE

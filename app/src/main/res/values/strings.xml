@@ -27,16 +27,4 @@
     <item>K106</item>                                   <!--TITLE LOCATION-->
     <item>Welkom in K106</item>                         <!--DESCRIPTION LOCATION-->
 </string-array>
-<!--<string-array name="device3">-->
-<!--<item>4</item>-->
-<!--<item></item>-->
-<!--<item></item>-->
-<!--<item>8492E75F-4FD6-469D-B132-043FE94921D8</item>-->
-<!--<item>Iphone</item>-->
-<!--<item>Test thuis</item>-->
-<!--<item>Welkom</item>-->
-<!--</string-array>-->
-<string name="items_title">Beacons</string>
-<string name="item_id">beacon 1</string>
-<string name="item_description">lokaal</string>
 </resources>

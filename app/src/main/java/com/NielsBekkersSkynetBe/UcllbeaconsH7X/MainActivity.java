@@ -1,12 +1,8 @@
 package com.NielsBekkersSkynetBe.UcllbeaconsH7X;
 
-import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.util.JsonReader;
-import android.util.JsonToken;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -20,26 +16,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.estimote.sdk.Beacon;
 import com.estimote.sdk.SystemRequirementsChecker;
-import com.estimote.sdk.cloud.internal.User;
 import com.estimote.sdk.cloud.model.Color;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
@@ -57,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
 
     static {
+        BACKGROUND_COLORS.put(Color.UNKNOWN, android.graphics.Color.rgb(224, 0, 73));
         BACKGROUND_COLORS.put(Color.ICY_MARSHMALLOW, android.graphics.Color.rgb(109, 170, 199));
         BACKGROUND_COLORS.put(Color.BLUEBERRY_PIE, android.graphics.Color.rgb(98, 84, 158));
         BACKGROUND_COLORS.put(Color.MINT_COCKTAIL, android.graphics.Color.rgb(155, 186, 160));
@@ -171,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
         initializeBeacons(beaconList);
     }
 
-    private void initializeBeacons(Vector<BeaconDevice> beacons) {
+    private void initializeBeacons(final Vector<BeaconDevice> beacons) {
         if (!beacons.isEmpty()) {
             ArrayList<BeaconID> list = new ArrayList<>();
             for(BeaconDevice bd : beacons) {
@@ -187,10 +173,16 @@ public class MainActivity extends AppCompatActivity {
                     Integer backgroundColor;
                     if (content != null) {
                         EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
-                        text = "You're in " + beaconDetails.getBeaconName() + "'s range!";
-                        backgroundColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
+                        BeaconDevice bd = getBeaconInfoFromList(beaconDetails, beacons);
+                        if(bd != null) {
+                            text = "Welkom in " + bd.getKeyLocationTitle() +"\n\rHier vind je: "+bd.getLocationDescription();
+                            backgroundColor = android.graphics.Color.rgb(224, 0, 73); //BACKGROUND_COLORS.get(Color.UNKNOWN);
+                        } else {
+                            text = "Geen overeenkomende info over " + beaconDetails.getBeaconName();
+                            backgroundColor = BACKGROUND_COLOR_NEUTRAL; //BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
+                        }
                     } else {
-                        text = "No beacons in range.";
+                        text = "Begeef je naar een lokaal om hier informatie over te krijgen.";
                         backgroundColor = null;
                     }
                     ((TextView) findViewById(R.id.textView)).setText(text);
@@ -200,5 +192,13 @@ public class MainActivity extends AppCompatActivity {
             });
             proximityContentManager.startContentUpdates();
         }
+    }
+    private BeaconDevice getBeaconInfoFromList(EstimoteCloudBeaconDetails beacon, Vector<BeaconDevice> beacons) {
+        for(BeaconDevice bd : beacons) {
+            if(bd.getName().equals(beacon.getBeaconName())) {
+                return bd;
+            }
+        }
+        return null;
     }
 }
