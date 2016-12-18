@@ -175,6 +175,8 @@ public class MainActivity extends AppCompatActivity {
                         EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
                         BeaconDevice bd = getBeaconInfoFromList(beaconDetails, beacons);
                         if(bd != null) {
+                            WidgetProvider w = new WidgetProvider();
+                            w.setBeacon(bd);
                             text = "Welkom in " + bd.getKeyLocationTitle() +"\n\rHier vind je: "+bd.getLocationDescription();
                             backgroundColor = android.graphics.Color.rgb(224, 0, 73); //BACKGROUND_COLORS.get(Color.UNKNOWN);
                         } else {

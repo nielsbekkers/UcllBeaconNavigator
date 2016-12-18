@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 16 10:56:44 CET 2016
+#Fri Dec 16 11:24:27 CET 2016
 175.set=ANDROID_RESOURCE
 122.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/layout/notification_template_part_chronometer.xml
 60.set=ANDROID_RESOURCE
