@@ -1,6 +1,7 @@
 package com.NielsBekkersSkynetBe.UcllbeaconsH7X;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -186,8 +187,7 @@ public class MainActivity extends AppCompatActivity {
                         EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
                         BeaconDevice bd = getBeaconInfoFromList(beaconDetails, beacons);
                         if(bd != null) {
-                            WidgetProvider w = new WidgetProvider();
-                            w.setBeacon(bd);
+                            updateWidget(bd.getKeyLocationTitle().toString(),bd.getLocationDescription().toString());
                             try {
                                 if(bd.getImageUrl().equals("")) {
                                     throw new Exception("No url linked to beacon");
@@ -226,5 +226,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return null;
+    }
+
+    private void updateWidget(String title,String desc) {
+        Intent i = new Intent(this, WidgetProvider.class);
+        i.setAction(WidgetProvider.UPDATE_ACTION);
+        i.putExtra("title", title);
+        i.putExtra("desc", desc);
+        sendBroadcast(i);
     }
 }

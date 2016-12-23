@@ -1,7 +1,7 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:minWidth="180dp"
     android:minHeight="120dp"
-    android:updatePeriodMillis="1800000"
+    android:updatePeriodMillis="1800"
     android:initialLayout="@layout/beaconinfo_widget_layout"
     android:resizeMode="horizontal|vertical"
     android:widgetCategory="home_screen|keyguard">
