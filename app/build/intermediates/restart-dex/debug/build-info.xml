@@ -4,29 +4,29 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="804333229346435"
+    timestamp="805080252107945"
     token="4127018042846048341"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1053" />
+        duration="1506" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="354" />
+        duration="111" />
     <task
         name="verifier"
-        duration="159" />
+        duration="62" />
 
     <artifact
         location="/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="804333229346435"
+        timestamp="805080252107945"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/outputs/apk/app-debug.apk"

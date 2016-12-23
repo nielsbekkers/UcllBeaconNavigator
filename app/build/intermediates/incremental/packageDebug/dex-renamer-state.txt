@@ -1,4 +1,4 @@
-#Fri Dec 23 11:09:46 CET 2016
+#Fri Dec 23 11:21:36 CET 2016
 base.0=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e003bab0feedf633cb33134aa1b922a9a6198e1e
 renamed.1=classes.dex
 renamed.0=classes2.dex

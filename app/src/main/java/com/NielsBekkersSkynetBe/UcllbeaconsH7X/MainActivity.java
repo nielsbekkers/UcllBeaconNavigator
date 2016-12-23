@@ -1,8 +1,6 @@
 package com.NielsBekkersSkynetBe.UcllbeaconsH7X;
 
 import android.app.ProgressDialog;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -194,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
                                 if(bd.getImageUrl().equals("")) {
                                     throw new Exception("No url linked to beacon");
                                 }
-                                UrlImageViewHelper.setUrlDrawable((ImageView) findViewById(R.id.imageView), "https://www.kuleuven.be/studentenvoorzieningen/gezondheid/images/ucll-logo-cmyk.png", R.drawable.loading);
+                                UrlImageViewHelper.setUrlDrawable((ImageView) findViewById(R.id.imageView), bd.getImageUrl(), R.drawable.loading);
                             } catch (Exception ex) {
                                 Log.e("Error getting picture", ex.toString());
                                 ((ImageView) findViewById(R.id.imageView)).setImageResource(R.drawable.ucll);

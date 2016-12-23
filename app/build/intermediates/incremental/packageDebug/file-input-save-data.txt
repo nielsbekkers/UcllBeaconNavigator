@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 23 11:09:46 CET 2016
+#Fri Dec 23 11:21:37 CET 2016
 175.set=ANDROID_RESOURCE
 122.file=/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/resources-debug.ap_/res/anim/design_snackbar_out.xml
 60.set=ANDROID_RESOURCE
