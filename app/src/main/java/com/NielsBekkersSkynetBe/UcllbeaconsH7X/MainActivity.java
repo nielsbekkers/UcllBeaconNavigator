@@ -1,9 +1,12 @@
 package com.NielsBekkersSkynetBe.UcllbeaconsH7X;
 
 import android.app.ProgressDialog;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.NielsBekkersSkynetBe.UcllbeaconsH7X.estimote.BeaconID;
@@ -18,11 +21,15 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.estimote.sdk.SystemRequirementsChecker;
 import com.estimote.sdk.cloud.model.Color;
+import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -147,10 +154,11 @@ public class MainActivity extends AppCompatActivity {
                 bd.setName(beacon.getString("name"));
                 bd.setLocationTitle(beacon.getString("locationTitle"));
                 bd.setLocationDescription(beacon.getString("locationDescription"));
+                bd.setImageUrl(beacon.getString("image"));
 
                 beaconList.add(bd);
             } catch (JSONException e) {
-
+                Log.e("ParseError", "Error parsing json");
             }
         }
         progress.dismiss();
@@ -161,7 +169,11 @@ public class MainActivity extends AppCompatActivity {
         if (!beacons.isEmpty()) {
             ArrayList<BeaconID> list = new ArrayList<>();
             for(BeaconDevice bd : beacons) {
-                list.add(new BeaconID(bd.getUUID(), bd.getMajor(), bd.getMinor()));
+                try {
+                    list.add(new BeaconID(bd.getUUID(), bd.getMajor(), bd.getMinor()));
+                } catch (Exception ex) {
+                    Log.e("Invalid beacon", "Invalid beacon detected, discarding...");
+                }
             }
 
             proximityContentManager = new ProximityContentManager(this,
@@ -171,25 +183,39 @@ public class MainActivity extends AppCompatActivity {
                 public void onContentChanged(Object content) {
                     String text;
                     Integer backgroundColor;
+                    Integer textColor = android.graphics.Color.WHITE;
                     if (content != null) {
                         EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
                         BeaconDevice bd = getBeaconInfoFromList(beaconDetails, beacons);
                         if(bd != null) {
                             WidgetProvider w = new WidgetProvider();
                             w.setBeacon(bd);
+                            try {
+                                if(bd.getImageUrl().equals("")) {
+                                    throw new Exception("No url linked to beacon");
+                                }
+                                UrlImageViewHelper.setUrlDrawable((ImageView) findViewById(R.id.imageView), "https://www.kuleuven.be/studentenvoorzieningen/gezondheid/images/ucll-logo-cmyk.png", R.drawable.loading);
+                            } catch (Exception ex) {
+                                Log.e("Error getting picture", ex.toString());
+                                ((ImageView) findViewById(R.id.imageView)).setImageResource(R.drawable.ucll);
+                            }
+
                             text = "Welkom in " + bd.getKeyLocationTitle() +"\n\rHier vind je: "+bd.getLocationDescription();
                             backgroundColor = android.graphics.Color.rgb(224, 0, 73); //BACKGROUND_COLORS.get(Color.UNKNOWN);
+                            textColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
                         } else {
                             text = "Geen overeenkomende info over " + beaconDetails.getBeaconName();
                             backgroundColor = BACKGROUND_COLOR_NEUTRAL; //BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
                         }
                     } else {
-                        text = "Begeef je naar een lokaal om hier informatie over te krijgen.";
+                        text = "Begeef je naar een lokaal om hier informatie over te krijgen";
                         backgroundColor = null;
                     }
                     ((TextView) findViewById(R.id.textView)).setText(text);
+                    ((TextView) findViewById(R.id.textView)).setTextColor(textColor);
                     findViewById(R.id.relativeLayout).setBackgroundColor(
                             backgroundColor != null ? backgroundColor : BACKGROUND_COLOR_NEUTRAL);
+
                 }
             });
             proximityContentManager.startContentUpdates();

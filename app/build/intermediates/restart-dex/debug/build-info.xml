@@ -4,40 +4,33 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="618651590615884"
+    timestamp="804333229346435"
     token="4127018042846048341"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="231" />
+        duration="1053" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="10" />
+        duration="354" />
     <task
         name="verifier"
-        duration="2" />
+        duration="159" />
 
     <artifact
-        location="/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-        type="DEX" />
+        location="/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="618513227523046"
+        timestamp="804333229346435"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="618651590615884"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

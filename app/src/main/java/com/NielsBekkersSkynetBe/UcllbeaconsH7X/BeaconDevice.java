@@ -11,6 +11,7 @@ public class BeaconDevice {
     private int KEY_MINOR;
     private String KEY_LOCATION_TITLE;
     private String KEY_LOCATION_DESCRIPTION;
+    private String KEY_IMAGE_URL;
 
     public BeaconDevice(){
 
@@ -38,6 +39,8 @@ public class BeaconDevice {
         this.KEY_LOCATION_DESCRIPTION = KEY_LOCATION_DESCRIPTION;
     }
 
+    public void setImageUrl(String KEY_URL) {this.KEY_IMAGE_URL = KEY_URL; }
+
     public int getMajor(){
         return KEY_MAJOR;
     }
@@ -61,4 +64,6 @@ public class BeaconDevice {
     public String getLocationDescription(){
         return KEY_LOCATION_DESCRIPTION;
     }
+
+    public String getImageUrl() {return KEY_IMAGE_URL; }
 }

@@ -25,8 +25,14 @@ public final class R {
         public static final int design_snackbar_out=0x7f05000d;
     }
     public static final class array {
+        /** DESCRIPTION LOCATION
+         */
         public static final int device0=0x7f0c0000;
+        /** DESCRIPTION LOCATION
+         */
         public static final int device1=0x7f0c0001;
+        /** DESCRIPTION LOCATION
+         */
         public static final int device2=0x7f0c0002;
     }
     public static final class attr {
@@ -2205,7 +2211,9 @@ containing a value of this type.
         public static final int beacon=0x7f020045;
         public static final int design_fab_background=0x7f020046;
         public static final int design_snackbar_background=0x7f020047;
-        public static final int notification_template_icon_bg=0x7f020048;
+        public static final int loading=0x7f020048;
+        public static final int notification_template_icon_bg=0x7f02004a;
+        public static final int ucll=0x7f020049;
     }
     public static final class id {
         public static final int action0=0x7f0e0075;

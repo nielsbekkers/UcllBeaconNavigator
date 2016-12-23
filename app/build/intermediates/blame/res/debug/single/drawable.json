@@ -4,6 +4,10 @@
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/ucll.png",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/res/drawable/ucll.png"
+    },
+    {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_dialog_material_background_dark.xml"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/loading.png",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/res/drawable/loading.png"
     },
     {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
