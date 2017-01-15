@@ -1,11 +1,19 @@
 package com.NielsBekkersSkynetBe.UcllbeaconsH7X;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.NielsBekkersSkynetBe.UcllbeaconsH7X.estimote.BeaconID;
@@ -33,6 +41,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
+import java.util.zip.Inflater;
+
+import static android.support.design.widget.Snackbar.LENGTH_INDEFINITE;
+import static java.security.AccessController.getContext;
 
 //
 // Running into any issues? Drop us an email to: contact@estimote.com
@@ -42,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private final String USER_AGENT = "Mozilla/5.0";
+    private String beaconsListString = "";
 
     ProgressDialog progress;
 
@@ -74,6 +87,24 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (Exception ex) {
             System.err.println(ex);
+            Snackbar snackbar = Snackbar
+                    .make(findViewById(android.R.id.content), "Failed to fetch beacons!", LENGTH_INDEFINITE)
+                    .setAction("RETRY", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = getIntent();
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                            finish();
+                            startActivity(intent);
+                        }
+                    });
+
+            snackbar.setActionTextColor(android.graphics.Color.RED);
+
+            View sbView = snackbar.getView();
+            TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(android.graphics.Color.YELLOW);
+            snackbar.show();
         }
 
         setContentView(R.layout.activity_main);
@@ -83,6 +114,22 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
         }
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Available beacons")
+                        .setMessage(beaconsListString)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_info)
+                        .show();
+            }
+        });
     }
 
     @Override
@@ -174,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("Invalid beacon", "Invalid beacon detected, discarding...");
                 }
             }
+            createBeaconListString(beacons);
 
             proximityContentManager = new ProximityContentManager(this,
                     list, new EstimoteCloudBeaconDetailsFactory());
@@ -182,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onContentChanged(Object content) {
                     String text;
                     Integer backgroundColor;
-                    Integer textColor = android.graphics.Color.WHITE;
+                    //Integer textColor = android.graphics.Color.WHITE;
                     if (content != null) {
                         EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
                         BeaconDevice bd = getBeaconInfoFromList(beaconDetails, beacons);
@@ -200,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
 
                             text = "Welkom in " + bd.getKeyLocationTitle() +"\n\rHier vind je: "+bd.getLocationDescription();
                             backgroundColor = android.graphics.Color.rgb(224, 0, 73); //BACKGROUND_COLORS.get(Color.UNKNOWN);
-                            textColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
+                            //textColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
                         } else {
                             text = "Geen overeenkomende info over " + beaconDetails.getBeaconName();
                             backgroundColor = BACKGROUND_COLOR_NEUTRAL; //BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
@@ -210,7 +258,8 @@ public class MainActivity extends AppCompatActivity {
                         backgroundColor = null;
                     }
                     ((TextView) findViewById(R.id.textView)).setText(text);
-                    ((TextView) findViewById(R.id.textView)).setTextColor(textColor);
+                    ((ImageView) findViewById(R.id.imageView)).setImageResource(R.drawable.ucll);
+                    //((TextView) findViewById(R.id.textView)).setTextColor(textColor);
                     findViewById(R.id.relativeLayout).setBackgroundColor(
                             backgroundColor != null ? backgroundColor : BACKGROUND_COLOR_NEUTRAL);
 
@@ -234,5 +283,13 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("title", title);
         i.putExtra("desc", desc);
         sendBroadcast(i);
+    }
+
+    private void createBeaconListString(final Vector<BeaconDevice> beacons) {
+        String list = "";
+        for(BeaconDevice bd : beacons) {
+            list += "Beacon: " + bd.getKeyLocationTitle() + "\n\r";
+        }
+        this.beaconsListString = list;
     }
 }

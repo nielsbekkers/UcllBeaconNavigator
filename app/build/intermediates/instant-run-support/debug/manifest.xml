@@ -33,6 +33,7 @@
         <activity android:name="com.NielsBekkersSkynetBe.UcllbeaconsH7X.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

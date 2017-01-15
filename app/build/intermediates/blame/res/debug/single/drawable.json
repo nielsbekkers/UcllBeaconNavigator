@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/triangle_left.xml",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.github.michaelye.easydialog/easydialog/1.4/res/drawable/triangle_left.xml"
+    },
+    {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/triangle_right.xml",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.github.michaelye.easydialog/easydialog/1.4/res/drawable/triangle_right.xml"
+    },
+    {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_dialog_material_background_light.xml"
     },
@@ -68,6 +76,10 @@
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_btn_check_material.xml"
     },
     {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/round_corner_bg.xml",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.github.michaelye.easydialog/easydialog/1.4/res/drawable/round_corner_bg.xml"
+    },
+    {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_item_background_holo_dark.xml"
     },
@@ -100,6 +112,10 @@
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/triangle_top.xml",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.github.michaelye.easydialog/easydialog/1.4/res/drawable/triangle_top.xml"
+    },
+    {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_switch_thumb_material.xml"
     },
@@ -114,5 +130,9 @@
     {
         "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
         "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/res/merged/debug/drawable/triangle_bottom.xml",
+        "source": "/Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.github.michaelye.easydialog/easydialog/1.4/res/drawable/triangle_bottom.xml"
     }
 ]

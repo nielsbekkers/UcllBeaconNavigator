@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:3:5-54
 		INJECTED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml
@@ -23,7 +23,7 @@ MERGED from [com.estimote:sdk:0.10.8] /Users/MbAirAlexander/Documents/AndroidStu
 	android:name
 		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:7:5-29:19
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:7:5-30:19
 MERGED from [com.android.support:design:23.1.0] /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.0] /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
@@ -41,35 +41,35 @@ MERGED from [com.estimote:sdk:0.10.8] /Users/MbAirAlexander/Documents/AndroidStu
 	android:name
 		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:8:9-38
 activity#com.NielsBekkersSkynetBe.UcllbeaconsH7X.MainActivity
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:15:9-20:20
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:15:9-21:20
 	android:name
 		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:15:19-47
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:16:13-19:29
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE+android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
 ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
 		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:17:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:18:17-77
-	android:name
-		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:18:27-74
-receiver#com.NielsBekkersSkynetBe.UcllbeaconsH7X.WidgetProvider
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:21:9-27:20
-	android:name
-		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:21:19-48
-intent-filter#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:22:13-24:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:23:13-80
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:18:17-84
 	android:name
-		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:23:21-77
+		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:18:25-81
+category#android.intent.category.LAUNCHER
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:19:27-74
+receiver#com.NielsBekkersSkynetBe.UcllbeaconsH7X.WidgetProvider
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:22:9-28:20
+	android:name
+		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:22:19-48
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:23:13-25:29
 meta-data#android.appwidget.provider
-ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:25:13-26:51
+ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:26:13-27:51
 	android:resource
-		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:26:13-48
+		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:27:13-48
 	android:name
-		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:25:24-65
+		ADDED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml:26:24-65
 uses-sdk
 INJECTED from /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:23.1.0] /Users/MbAirAlexander/Documents/AndroidStudioProjects/UcllbeaconsH7X/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/AndroidManifest.xml:20:5-43
